@@ -22,6 +22,28 @@ def coin_flip():
     else:
         return "other"
 
+def draw_card():
+    #simulate drawing a card
+    #Return a card value from A,2,3,... Q,K
+        #randon.randrange() -> int in some range 
+    reult = random.ranrange(1, 14)
+
+    if result == 1:
+        return "A"
+    elif result == 11:
+        return "J"
+    elif result == 12:
+        return "Q"
+    elif result == 13:
+        return "K"
+    else:
+        return str(result)
+    
+
+
+
+
+
 def main():
     heads = 0
     tails = 0
@@ -42,5 +64,6 @@ def main():
     print(f"Heads: {heads}")
     print(f"Tails: {tails}")
     print(f"Others: {others}")
+    
 
 main()

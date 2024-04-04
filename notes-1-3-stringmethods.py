@@ -10,7 +10,7 @@
 
 weather = input("What's the weather like?")
 
-weather = weather.strip("!,?.@#$%^&")
+weather = weather.strip("!,?.@#$%^& ")
 
 weather = weather.title()
 
