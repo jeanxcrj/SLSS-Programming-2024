@@ -13,8 +13,18 @@ class Pokemon: # use a capital letter for class
         self.weight = 0
         self.height = 0
         self.type = "normal"
+        self.actual_cry = "Rooooooooooooooar"
 
         print("A new Pokemon is born!")
+    
+    def cry(self):
+        """Represents the sound a Pokemon makes
+        
+        Returns:
+        - String representing the sound it makes"""
+  
+        return f'{self.name} says, "{self.actual_cry}"!'
+         
 
 #Create two pokemon using our class
 #Make one pokemon that is pikachu
@@ -41,3 +51,9 @@ pokemon_two.type = "Water"
 print(pokemon_two.id)
 print(pokemon_two.name)
 print(pokemon_two.type)
+
+pokemon_one.actual_cry = "Pikachuuuuu"
+pokemon_two.actual_cry = "GRRraagrgrggg"
+
+print(pokemon_one.cry())
+print(pokemon_two.cry())
