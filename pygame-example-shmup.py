@@ -62,7 +62,13 @@ class Bullet(pg.sprite.Sprite):
         # Spawn at the Player
         self.rect.centerx = player_loc[0]
         self.rect.bottom = player_loc[1]
-  
+
+    def update(self):
+        """Move the bullet up and remove it if it goes off-screen"""
+        self.rect.y -= 10
+        if self.rect.bottom < 0:
+            self.kill()
+
 
 class Enemy(pg.sprite.Sprite):
     def __init__(self):
