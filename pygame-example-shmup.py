@@ -111,7 +111,7 @@ def start():
     all_sprites.add(player)
 
     # Create enemy sprites
-    for _ in range(5):
+    for _ in range(10):
         enemy = Enemy()
         all_sprites.add(enemy)
         enemies.add(enemy)
